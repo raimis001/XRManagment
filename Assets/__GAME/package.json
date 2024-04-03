@@ -1,6 +1,6 @@
 {
   "name": "com.aog.xrmanager",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "displayName": "XR Manager (ra001)",
   "description": "Unity Open XR Oculus Quest simple management (moving, hand tracking, interaction)"
 }

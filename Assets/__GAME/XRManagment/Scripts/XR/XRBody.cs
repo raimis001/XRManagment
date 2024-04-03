@@ -71,9 +71,13 @@ public class XRBody : MonoBehaviour
 
         step = Quaternion.AngleAxis(cameraT.eulerAngles.y, Vector3.up) * step;
         step = new Vector3(step.x, 0, step.z) * moveSpeed;
+#if UNITY_6000_0_OR_NEWER
         step.y = body.linearVelocity.y;
-
         body.linearVelocity = step;
+#else
+        step.y = body.velocity.y;
+        body.velocity = step;
+#endif
     }
 
     void Rotate()

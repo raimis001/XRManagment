@@ -13,4 +13,4 @@ Using packages:
 * new InputSystem
 
 Add to project with Package Manager Git path:
-https://github.com/raimis001/XRManagment.git?path=/Assets/
+https://github.com/raimis001/XRManagment.git?path=/Assets/__GAME/

@@ -1,0 +1,6 @@
+{
+  "name": "com.aog.vrhand",
+  "version": "1.0.3",
+  "displayName": "VR hand (ra001)",
+  "description": "Hand prefab for VR. WIP. Install Probulder package first"
+}

@@ -89,7 +89,7 @@ public class XRBody : MonoBehaviour
 
 
         float rotate = XRHand.right.joystick.x;
-        if (Mathf.Abs(rotate) < 0.01f)
+        if (Mathf.Abs(rotate) < 0.2f)
             return;
 
         StartCoroutine(IRotate(rotate));

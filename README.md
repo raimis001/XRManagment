@@ -6,6 +6,7 @@ Unity Open XR Oculus Quest simple management:
 * Camera height controlling
 * Rigidbody moving with controllers joystick
 * Simple hand intereaction with trigger collider object
+* Haptics
 
 Using packages:
 * OpenXR

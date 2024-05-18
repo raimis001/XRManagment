@@ -24,5 +24,7 @@ public class ExampleInteractor : MonoBehaviour
     public void HandStay(XRHand hand, XRInteractor interactor)
     {
         rend.material = hand.triggerDown ? materials[2] : materials[1];
+        if (hand.triggerDown)
+            hand.Haptic(0.5f, 0.2f, 300);
     }
 }

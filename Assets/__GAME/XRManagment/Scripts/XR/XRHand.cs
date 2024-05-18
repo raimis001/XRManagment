@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.XR;
 using UnityEngine.XR;
+using UnityEngine.XR.OpenXR.Input;
 
 public class XRHand : MonoBehaviour
 {
@@ -15,6 +17,8 @@ public class XRHand : MonoBehaviour
     InputAction triggerAction;
     [SerializeField]
     InputAction gripAction;
+    [SerializeField]
+    InputAction hapticAction;
 
     public Vector2 joystick => joystickAction.ReadValue<Vector2>();
 
@@ -29,6 +33,7 @@ public class XRHand : MonoBehaviour
         joystickAction.Enable();
         triggerAction.Enable();
         gripAction.Enable();
+        hapticAction.Enable();
     }
 
     private void Awake()
@@ -43,6 +48,12 @@ public class XRHand : MonoBehaviour
     {
         Gizmos.color = Color.blue;
         Gizmos.DrawRay(transform.position, transform.forward);
+    }
+
+    public void Haptic(float amplitude, float duration, float frequency = 0)
+    {
+        XRController controller = kind == XRNode.LeftHand ? XRController.leftHand : XRController.rightHand;
+        OpenXRInput.SendHapticImpulse(hapticAction, amplitude, frequency, duration, controller);
     }
 
 

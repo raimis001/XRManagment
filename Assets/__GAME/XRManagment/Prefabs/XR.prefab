@@ -192,6 +192,23 @@ MonoBehaviour:
       m_Action: Grip
       m_Flags: 0
     m_Flags: 0
+  hapticAction:
+    m_Name: Haptic
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 6721f004-88f0-4073-ae9d-6a2b5095bb6f
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: d8780931-eb1e-4e65-b15f-631384e18a08
+      m_Path: <XRController>{LeftHand}/haptic
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Haptic
+      m_Flags: 0
+    m_Flags: 0
 --- !u!1 &384087202848401870
 GameObject:
   m_ObjectHideFlags: 0
@@ -882,6 +899,23 @@ MonoBehaviour:
       m_Processors: 
       m_Groups: 
       m_Action: Grip
+      m_Flags: 0
+    m_Flags: 0
+  hapticAction:
+    m_Name: Haptic
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: eb598c73-95f9-4dc1-bd2f-5f5549092325
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 5c5b3f6a-0b2c-4d52-a3ef-63ac34e8b6e1
+      m_Path: <XRController>{RightHand}/haptic
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Haptic
       m_Flags: 0
     m_Flags: 0
 --- !u!1 &5364961246151748408

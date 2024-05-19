@@ -20,6 +20,9 @@ public class XRHand : MonoBehaviour
     [SerializeField]
     InputAction hapticAction;
 
+    [SerializeField]
+    bool legacyHaptics = true;
+
     public Vector2 joystick => joystickAction.ReadValue<Vector2>();
 
     public bool triggerDown => triggerAction.triggered;
@@ -27,6 +30,9 @@ public class XRHand : MonoBehaviour
 
     public bool gripDown => gripAction.triggered;
     public bool gripHold => gripAction.IsPressed();
+
+
+    UnityEngine.XR.InputDevice device;
 
     private void OnEnable()
     {
@@ -52,8 +58,17 @@ public class XRHand : MonoBehaviour
 
     public void Haptic(float amplitude, float duration, float frequency = 0)
     {
-        XRController controller = kind == XRNode.LeftHand ? XRController.leftHand : XRController.rightHand;
-        OpenXRInput.SendHapticImpulse(hapticAction, amplitude, frequency, duration, controller);
+        if (legacyHaptics)
+        {
+            if (device == null || !device.isValid)
+                device = XRManager.GetDevice(kind);
+
+            device.SendHapticImpulse(0, amplitude, duration);
+        } else
+        {
+            XRController controller = kind == XRNode.LeftHand ? XRController.leftHand : XRController.rightHand;
+            OpenXRInput.SendHapticImpulse(hapticAction, amplitude, frequency, duration, controller);
+        }
     }
 
 

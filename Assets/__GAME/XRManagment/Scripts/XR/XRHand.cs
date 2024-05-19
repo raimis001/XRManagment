@@ -19,6 +19,10 @@ public class XRHand : MonoBehaviour
     InputAction gripAction;
     [SerializeField]
     InputAction hapticAction;
+    [SerializeField]
+    InputAction primaryAction;
+    [SerializeField]
+    InputAction secondaryAction;
 
     [SerializeField]
     bool legacyHaptics = true;
@@ -31,6 +35,13 @@ public class XRHand : MonoBehaviour
     public bool gripDown => gripAction.triggered;
     public bool gripHold => gripAction.IsPressed();
 
+    public bool primaryDown => primaryAction.triggered;
+    public bool primaryHold => primaryAction.IsPressed();
+
+    public bool secondaryDown => secondaryAction.triggered;
+    public bool secondaryHold => secondaryAction.IsPressed();
+
+
 
     UnityEngine.XR.InputDevice device;
 
@@ -40,6 +51,8 @@ public class XRHand : MonoBehaviour
         triggerAction.Enable();
         gripAction.Enable();
         hapticAction.Enable();
+        primaryAction.Enable();
+        secondaryAction.Enable();
     }
 
     private void Awake()

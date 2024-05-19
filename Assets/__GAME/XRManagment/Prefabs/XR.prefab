@@ -209,6 +209,41 @@ MonoBehaviour:
       m_Action: Haptic
       m_Flags: 0
     m_Flags: 0
+  primaryAction:
+    m_Name: Primary
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 7452f60b-b0c4-4c2e-a11f-06895fae74e5
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: d206babb-88e3-44ca-9f53-3d672776db38
+      m_Path: <XRController>{LeftHand}/primaryButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Primary
+      m_Flags: 0
+    m_Flags: 0
+  secondaryAction:
+    m_Name: Secondary
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 2d4ee92d-3a88-4a9b-b9b6-df8e009b42cd
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 394aa287-8cb9-419c-8cfd-8a415629c3d3
+      m_Path: <XRController>{LeftHand}/secondaryButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Secondary
+      m_Flags: 0
+    m_Flags: 0
+  legacyHaptics: 1
 --- !u!1 &384087202848401870
 GameObject:
   m_ObjectHideFlags: 0
@@ -918,6 +953,41 @@ MonoBehaviour:
       m_Action: Haptic
       m_Flags: 0
     m_Flags: 0
+  primaryAction:
+    m_Name: Primary
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 52965149-322c-48d7-a7a4-f75ea69fc989
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 1ad34b24-cc2c-423d-90a2-2d48bd242dd0
+      m_Path: <XRController>{RightHand}/primaryButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Primary
+      m_Flags: 0
+    m_Flags: 0
+  secondaryAction:
+    m_Name: Secondary
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 0d7e5d5e-5714-4640-884b-1487de78413a
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: da0f41ed-3f69-4fa3-ae10-92dbb8b8d7d6
+      m_Path: <XRController>{RightHand}/secondaryButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Secondary
+      m_Flags: 0
+    m_Flags: 0
+  legacyHaptics: 1
 --- !u!1 &5364961246151748408
 GameObject:
   m_ObjectHideFlags: 0
